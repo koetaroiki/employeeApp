@@ -1,4 +1,4 @@
-package employeeApp.dao;
+package dao;
 
 public class EmployeeDAO {
   public static void main(String[] args) {
