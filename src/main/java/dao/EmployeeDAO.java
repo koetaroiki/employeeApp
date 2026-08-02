@@ -25,7 +25,7 @@ public class EmployeeDAO {
     // Employeeオブジェクトを格納するリスト
     List<Employee> employees = new ArrayList<>();
 
-    // 実行するSQL
+    // 実行するSQL（必要な列だけを指定して抽出）
     String sql = "SELECT id, name, age, department FROM employees";
 
     try (
