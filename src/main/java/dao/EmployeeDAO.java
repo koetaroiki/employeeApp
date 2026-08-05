@@ -59,4 +59,14 @@ public class EmployeeDAO {
     // 取得した社員一覧を返す
     return employees;
   }
+
+  /**
+   * 社員情報を登録する
+   *
+   * @param employee 登録する社員情報
+   */
+  public void insert(Employee employee) {
+    // 実行するSQL
+    String sql = "INSERT INTO employees(name, age, department) VALUES (?, ?, ?)";
+  }
 }
