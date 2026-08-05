@@ -68,5 +68,27 @@ public class EmployeeDAO {
   public void insert(Employee employee) {
     // 実行するSQL
     String sql = "INSERT INTO employees(name, age, department) VALUES (?, ?, ?)";
+
+    try (
+        // データベースへ接続
+        Connection connection = DBUtil.getConnection();
+
+        // SQLを準備
+        PreparedStatement statement = connection.prepareStatement(sql)) {
+
+      // SQLの?に値を設定
+      statement.setString(1, employee.getName());
+      statement.setInt(2, employee.getAge());
+      statement.setString(3, employee.getDepartment());
+
+      // SQLを実行
+      int count = statement.executeUpdate();
+
+      // 登録件数を表示
+      System.out.println(count + "件登録しました。");
+
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
   }
 }
