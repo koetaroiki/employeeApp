@@ -13,14 +13,14 @@ public class Main {
     // EmployeeDAOを生成
     EmployeeDAO dao = new EmployeeDAO();
     // 登録する社員データを作成
-    Employee employee = new Employee(
-        0,
-        "鈴木花子",
-        30,
-        "総務");
+    // Employee employee = new Employee(
+    // 0,
+    // "鈴木花子",
+    // 30,
+    // "総務");
 
-    // 社員を登録
-    dao.insert(employee);
+    // // 社員を登録
+    // dao.insert(employee);
 
     // 社員情報をデータベースから取得
     List<Employee> employees = dao.findAll();
