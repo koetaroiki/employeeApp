@@ -91,4 +91,13 @@ public class EmployeeDAO {
       e.printStackTrace();
     }
   }
+
+  /**
+   * 社員情報を更新する
+   *
+   * @param employee 更新する社員情報
+   */
+  public void update(Employee employee) {
+
+  }
 }
